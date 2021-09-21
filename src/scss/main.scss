@@ -1,0 +1,44 @@
+@import "variables";
+@import "vazir";
+// @import "gradient";
+
+
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+
+
+@import "layouts/document";
+@import "layouts/header";
+@import "layouts/footer";
+
+
+
+body {
+    background-color: green;
+  //  content: '';
+    height: 100vh;
+    width: 100%;
+    // background-image: url('../images/1.jpg');
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    display: block;
+    margin: 0;
+    padding: 5%;
+    transition: all 2000;
+}
+
+a {
+    background-color: rgb(35, 35, 151);
+    color: black;
+    border: 1px solid seashell;
+    padding: 20px 5px;
+    z-index: 100;
+}

@@ -2,3 +2,6 @@
 /dist/
 /.vscode/
 .DS_Store
+dist
+dist-ssr
+*.local
