@@ -1,13 +1,8 @@
-if (typeof module.hot !== "undefined") {
-    module.hot.accept();
-}
+
+import '../index.html';
+import '../about.html';
 
 
-
-
-
-import '../templates/index.html';
-import '../templates/about.html';
 import '../scss/main.scss';
 
 import './polyfill.min';
