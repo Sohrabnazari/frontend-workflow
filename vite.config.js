@@ -38,12 +38,6 @@ export default defineConfig({
     }
   },
   css: {
-    postcss: "./postcss.config.js",
-    preprocessorOptions: {
-      scss: { additionalData: `@import "/src/scss/main.module";` },
-    },
-  },
-  alias: {
-    // '/@/': resolve(__dirname, 'src'),
+    postcss: "./postcss.config.js"
   }
 })

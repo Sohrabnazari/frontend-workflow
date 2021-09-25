@@ -3,7 +3,7 @@ import '../index.html';
 import '../about.html';
 
 
-import '../scss/main.module.scss';
+// import '../scss/main.module.scss';
 
 import './polyfill.min';
 import './jquery';

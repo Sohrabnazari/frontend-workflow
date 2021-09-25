@@ -1,7 +1,7 @@
-@use "variables.module" as *;
-@use "vazir.module" as *;
-// @use "colors.module" as *;
-// @use "gradient.module" as *;
+@import "variables.module";
+@import "vazir.module";
+// @import "colors.module";
+// @import "gradient.module";
 
 
 // @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
@@ -15,9 +15,9 @@
 // @import "../../node_modules/bootstrap/scss/bootstrap-grid";
 
 
-@use "layouts/document.module" as *;
-@use "layouts/header.module" as *;
-@use "layouts/footer.module" as *;
+@import "layouts/document.module";
+@import "layouts/header.module";
+@import "layouts/footer.module";
 
 
 
