@@ -1,0 +1,9 @@
+@use "../variables.module" as *;
+
+#footer {
+    text-align: center;
+    color: $yellow;
+    background-color: $yellow;
+    line-height: 100px;
+    margin-top: 200px;
+}
