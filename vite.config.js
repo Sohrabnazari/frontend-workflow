@@ -18,7 +18,7 @@ export default defineConfig({
     //     '(postcss|vite).config.[jt]s',
     //   ]
     // }),
-    cssInjectedByJsPlugin(),
+    // cssInjectedByJsPlugin(),
     legacy({
       targets: ['defaults', 'ie >= 11'],
       polyfills: ['es.promise.finally', 'es/map', 'es/set'],

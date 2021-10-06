@@ -1,51 +1,23 @@
-@import "variables.module";
-@import "vazir.module";
-// @import "colors.module";
-// @import "gradient.module";
+@import "components/vazir.module";
 
-
-// @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
-// @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
-// @import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
-// @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-
-
-// @import "../../node_modules/bootstrap/scss/bootstrap-reboot";
-// @import "../../node_modules/bootstrap/scss/bootstrap";
-// @import "../../node_modules/bootstrap/scss/bootstrap-grid";
-
-
-@import "layouts/document.module";
-@import "layouts/header.module";
-@import "layouts/footer.module";
-
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
-    background-color: $green;
-  //  content: '';
-    height: 100vh;
-    width: 100%;
-    // background-image: url('../images/1.jpg');
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    display: block;
-    margin: 0;
-    padding: 5%;
-    transition: all 2000;
-}
-
-a {
-    background-color: $yellow;
-    color: $black;
-    border: 1px solid seashell;
-    padding: 20px 5px;
-    z-index: 100;
+  height: 100vh;
+  background-color: green;
+  display: flex;
 }
 
 
-#root {
-  background-color: red;
-  z-index: 444;
+@for $i from 1 to 4 {
+  .item-#{$i} {
+    content: '';
+    width: 200px;
+    height: 200px;
+    background-color: rgb($i * 75, $i - 1 * 75, 75 / $i);
+  }
 }
