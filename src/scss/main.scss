@@ -1,0 +1,29 @@
+@use 'sass:math';
+
+@import "components/vazir.module";
+
+
+.container {
+  height: 100vh;
+  background-color: green;
+  display: flex;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@for $i from 1 to 4 {
+  .item-#{$i} {
+    content: '';
+    width: 200px;
+    height: 200px;
+    background-color: rgb($i * 75, $i - 1 * 75, math.ceil(math.div(255, $i)) );
+  }
+}
+
+@for $i from 1 through 5 {
+  .col-#{$i}-m { color:red; }
+}
