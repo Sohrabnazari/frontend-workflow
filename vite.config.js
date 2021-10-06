@@ -38,6 +38,11 @@ export default defineConfig({
     }
   },
   css: {
-    postcss: "./postcss.config.js"
-  }
+    postcss: "./postcss.config.js",
+    preprocessorOptions: {
+      scss: {
+          quietDeps: true,
+      },
+  },
+}
 })
