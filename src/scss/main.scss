@@ -1,29 +1,144 @@
-@use 'sass:math';
+@use "sass:math";
 
 @import "components/vazir.module";
 
+@font-face {
+  font-family: "Alata";
+  src: url("../fonts/Alata.ttf") format("truetype");
+  font-weight: 400;
+}
 
-.container {
-  height: 100vh;
-  background-color: green;
-  display: flex;
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans.ttf") format("truetype");
+  font-weight: 300;
+}
+.border-log {
+  border: 2px solid red;
+}
+
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+$primary-color: hsl(0, 0%, 100%);
+$secondary-color: hsl(0, 0%, 0%);
+$dark-grey: hsl(0, 0%, 55%);
+$darker-grey: hsl(0, 0%, 41%);
+
+html {
+  font-size: 62.5%;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Alata", "JosefinSans";
 }
 
-@for $i from 1 to 4 {
-  .item-#{$i} {
-    content: '';
-    width: 200px;
-    height: 200px;
-    background-color: rgb($i * 75, $i - 1 * 75, math.ceil(math.div(255, $i)) );
+li {
+  list-style: none;
+}
+
+header,
+footer,
+.about,
+.projects {
+  height: 100vh;
+  display: flex;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
+}
+
+header {
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+
+  .navbar {
+    // @extend .border-log;
+    margin: 50px auto;
+    max-width: $desktop-width;
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    color: $primary-color;
+    padding: 0 120px;
+
+    .logo {
+      font-family: "Alata";
+      font-weight: 400;
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
+
+    .nav-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-end;
+
+      .nav-item {
+        width: 100%;
+        height: auto;
+
+        &:not(:last-child) {
+          margin-right: 35px;
+        }
+
+        a {
+          font-family: "Alata";
+          letter-spacing: 0.08rem;
+          text-decoration: none;
+          color: $primary-color;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .hero-text {
+    border: 2px solid $primary-color;
+    padding: 40px 90px 35px 35px;
+    margin: 100px;
+
+    span {
+      color: $primary-color;
+      font-size: 6.8rem;
+      margin: auto;
+      letter-spacing: 0.4rem;
+      font-family: "JosefinSans";
+    }
   }
 }
 
-@for $i from 1 through 5 {
-  .col-#{$i}-m { color:red; }
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .hero-text {
+    padding: 40px 50px 35px 35px;
+    margin: 100px 50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
 }
